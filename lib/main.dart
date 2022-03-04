@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
-                        '$inputUser',
+                        inputUser.toStringAsFixed(2),
                         style: const TextStyle(fontSize: 30),
                       ),
                     ],
@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
-                        '$kelvin',
+                        kelvin.toStringAsFixed(2),
                         style: const TextStyle(fontSize: 30),
                       ),
                     ],
@@ -98,7 +98,7 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
-                        '$reamur',
+                        reamur.toStringAsFixed(2),
                         style: const TextStyle(fontSize: 30),
                       ),
                     ],
@@ -110,7 +110,7 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
-                        '$fahrenheit',
+                        fahrenheit.toStringAsFixed(2),
                         style: const TextStyle(fontSize: 30),
                       ),
                     ],
