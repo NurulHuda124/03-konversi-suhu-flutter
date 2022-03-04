@@ -52,6 +52,9 @@ class _MyAppState extends State<MyApp> {
               TextFormField(
                 controller: etInput,
                 keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
+                ],
                 decoration: const InputDecoration(
                   hintText: 'Masukkan Suhu Dalam Celcius',
                 ),
@@ -61,25 +64,25 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Suhu dalam Celcius",
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
                         '$inputUser',
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Suhu dalam Kelvin",
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
                         '$kelvin',
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
@@ -90,38 +93,39 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Suhu dalam Reamur",
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
                         '$reamur',
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         "Suhu dalam Fahrenheit",
                         style: TextStyle(fontSize: 20),
                       ),
                       Text(
                         '$fahrenheit',
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       ),
                     ],
                   ),
                 ],
               ),
-              Container(
+              SizedBox(
                   width: double.infinity,
                   height: 50,
+                  // ignore: deprecated_member_use
                   child: RaisedButton(
                     onPressed: _incrementCounter,
                     color: Colors.red,
                     textColor: Colors.white,
-                    child: Text("Konversi"),
+                    child: const Text("Konversi"),
                   ))
             ],
           ),
